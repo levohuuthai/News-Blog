@@ -1,0 +1,59 @@
+@import "media";
+
+$cols: 12;
+$gutter: 30px;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: flex-start;
+  margin: -$gutter / 2;
+
+  @for $i from 1 through $cols {
+    @include xs {
+      .col-xs-#{$i} {
+        padding: $gutter / 2;
+        width: (100% / $cols) * $i;
+      }
+    }
+  }
+
+  @for $i from 1 through $cols {
+    @include sm {
+      .col-sm-#{$i} {
+        padding: $gutter / 2;
+        width: (100% / $cols) * $i;
+      }
+    }
+  }
+
+  @for $i from 1 through $cols {
+    @include md {
+      .col-md-#{$i} {
+        padding: $gutter / 2;
+        width: (100% / $cols) * $i;
+      }
+    }
+  }
+
+  @for $i from 1 through $cols {
+    @include lg {
+      .col-lg-#{$i} {
+        padding: $gutter / 2;
+        width: (100% / $cols) * $i;
+      }
+    }
+  }
+  //Viết thêm cái xlg lớn hơn 1 ngàn 2 thì nhận min-width: 1201
+  @for $i from 1 through $cols {
+    @include xlg {
+      .col-xlg-#{$i} {
+        padding: $gutter / 2;
+        width: (100% / $cols) * $i;
+      }
+    }
+  }
+}
+
+//col-sm-6
